@@ -1,13 +1,12 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Drawer from '../drawer/Drawer';
-
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Drawer from "../drawer/Drawer";
+import styles from "./header.module.css"
 
 export default function Header() {
   return (
@@ -19,10 +18,10 @@ export default function Header() {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ mr: 1 }}
           >
-            <Drawer></Drawer>
             <MenuIcon />
+            <Drawer />
           </IconButton>
           <Button color="inherit">Login</Button>
         </Toolbar>
