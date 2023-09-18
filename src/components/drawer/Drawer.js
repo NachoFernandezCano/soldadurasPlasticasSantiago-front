@@ -1,8 +1,8 @@
 "use client";
 import * as React from "react";
+import styles from "./Drawer.module.css"
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -12,7 +12,8 @@ import RequestPageIcon from "@mui/icons-material/RequestPage";
 import PersonIcon from "@mui/icons-material/Person";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import styles from "./Drawer.module.css"
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 
 let icons = [CalendarMonthIcon, RequestPageIcon, PersonIcon, AttachMoneyIcon];
 
@@ -65,7 +66,9 @@ export default function Drawer() {
     <div>
       {["left"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <IconButton onClick={toggleDrawer(anchor, true)}>
+            <MenuIcon /> {/* Reemplaza `{anchor}` con el icono que desees */}
+          </IconButton>
           <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}
@@ -79,3 +82,5 @@ export default function Drawer() {
     </div>
   );
 }
+
+

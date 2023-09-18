@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { useState, useEffect } from 'react';
 import axios from '../../config/axiosInit';
 import styles from "./Card.module.css"
-import AttachMoneyRoundedIcon from '@mui/icons-material/AttachMoneyRounded';
+
 
 
 const bull = (
@@ -27,7 +27,7 @@ export default function BasicCard() {
       const info = await axios.get("/api/employee/getEmployees");
       setEmployees(info.data.employee)
     } catch (error) {
-      console.log("Ningun usuario pa");
+      console.log("Ningun empleado pa");
     }
    }
 
